@@ -4,6 +4,7 @@ public class Sword : MonoBehaviour
 {
     [SerializeField] Transform match;
     [SerializeField] Transform pivot;
+    [SerializeField] Transform target;
     public float knockbackForce = 10f;
     public float swingSpeed = 360f; // degrees per second
     private void FixedUpdate()
@@ -22,10 +23,9 @@ public class Sword : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        print("Sword collided with: " + collision.gameObject.name);
         if (collision.gameObject.TryGetComponent(out Monster monster))
         {
-            Vector2 knockbackDirection = (collision.transform.position - transform.position).normalized;
+            Vector2 knockbackDirection = (collision.transform.position - target.position).normalized;
             monster.ApplyKnockback(knockbackDirection * knockbackForce);
         }
     }

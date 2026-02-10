@@ -183,7 +183,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   match: {fileID: 0}
   pivot: {fileID: 6308723501248489883}
-  knockbackForce: 50
+  target: {fileID: 9062227413077456614}
+  knockbackForce: 20
   swingSpeed: 180
 --- !u!50 &8913743655463434104
 Rigidbody2D:

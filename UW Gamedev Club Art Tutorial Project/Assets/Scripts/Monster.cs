@@ -35,7 +35,6 @@ public class Monster : MonoBehaviour
 
     public void ApplyKnockback(Vector2 force)
     {
-        print("Applying knockback: " + force);
         rb.AddForce(force, ForceMode2D.Impulse);
     }
 }
