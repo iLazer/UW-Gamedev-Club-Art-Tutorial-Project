@@ -29,7 +29,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4.97, y: 2.86, z: -9.958865}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -101,6 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab79fdaddc405e9428c2b4b3aab8484f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnField: {fileID: 0}
 --- !u!58 &5262448686144708789
 CircleCollider2D:
   m_ObjectHideFlags: 0

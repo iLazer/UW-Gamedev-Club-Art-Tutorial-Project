@@ -7,7 +7,7 @@ public class EnemySpawner : MonoBehaviour
     public float spawnInterval = 2f; // Time in seconds between spawns
     private void Start()
     {
-        InvokeRepeating(nameof(SpawnEnemy), spawnInterval, spawnInterval);
+        InvokeRepeating(nameof(SpawnEnemy), 0, spawnInterval);
     }
 
     private void SpawnEnemy()
