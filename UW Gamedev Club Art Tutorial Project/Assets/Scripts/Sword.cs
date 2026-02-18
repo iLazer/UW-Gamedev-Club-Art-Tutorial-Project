@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Sword : MonoBehaviour
 {
@@ -11,7 +12,7 @@ public class Sword : MonoBehaviour
     {
         pivot.position = match.position;
         // Rotate the sword to face the mouse cursor
-        Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
         Vector2 direction = mousePosition - match.position;
         float targetAngle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         float currentAngle = pivot.rotation.eulerAngles.z;

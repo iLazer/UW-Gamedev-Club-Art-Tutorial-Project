@@ -10,7 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2668891758120506914}
   - component: {fileID: 1637055764326452298}
+  - component: {fileID: 8825319519154093451}
   - component: {fileID: 2682735667292173283}
+  - component: {fileID: 5250347498205360378}
   - component: {fileID: 165094600953928181}
   - component: {fileID: 5050425715994485540}
   m_Layer: 10
@@ -62,7 +64,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &2682735667292173283
+--- !u!114 &8825319519154093451
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -71,12 +73,63 @@ MonoBehaviour:
   m_GameObject: {fileID: 8787000023202988980}
   m_Enabled: 1
   m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f813738b464c4794295c44cb80ba4b83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2682735667292173283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8787000023202988980}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 33cc4ca29632dd84fb9244c1d782d268, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteRenderer: {fileID: 5050425715994485540}
   speed: 100
+--- !u!114 &5250347498205360378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8787000023202988980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 166f2dc693cde7b47abd14eb4aca29a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetRender: {fileID: 5050425715994485540}
   spawnDelay: 2
+  onSpawn:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 165094600953928181}
+        m_TargetAssemblyTypeName: UnityEngine.PolygonCollider2D, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 2682735667292173283}
+        m_TargetAssemblyTypeName: Monster, Assembly-CSharp
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!60 &165094600953928181
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -114,7 +167,7 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.28866667}
+    pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1, y: 1}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
@@ -123,9 +176,12 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0, y: 0.5773587}
-      - {x: -0.5, y: -0.28866667}
-      - {x: 0.5, y: -0.28866667}
+    - - {x: 0.32358342, y: 0.12031138}
+      - {x: 0.02117402, y: 0.27322295}
+      - {x: -0.26569963, y: 0.11592359}
+      - {x: -0.33060765, y: -0.26364276}
+      - {x: 0.0076596905, y: -0.37338904}
+      - {x: 0.3710308, y: -0.2674927}
   m_UseDelaunayMesh: 0
 --- !u!212 &5050425715994485540
 SpriteRenderer:
@@ -170,9 +226,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 0.39215687}
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 21300000, guid: f81a9a26b52690d41981a2418d73f4b5, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.39215687}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

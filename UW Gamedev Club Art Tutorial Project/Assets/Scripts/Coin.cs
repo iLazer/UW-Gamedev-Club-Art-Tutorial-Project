@@ -8,8 +8,7 @@ public class Coin : MonoBehaviour
     {
         if(collision.gameObject.TryGetComponent(out Player player))
         {
-            // You can add coin collection logic here, such as increasing the player's score.
-            Score.Instance.score += 1; // Assuming you have a Score class to manage the player's score.
+            Score.Instance.score += 1;
             transform.position = spawnField.getRandomPos();
         }
     }

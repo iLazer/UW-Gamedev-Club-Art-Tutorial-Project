@@ -32,9 +32,16 @@ public class Chalice : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.TryGetComponent(out Monster monster))
+        if(collision.gameObject.TryGetComponent(out ChaliceKiller monster))
         {
             onDie.Invoke();
-        };
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.TryGetComponent(out ChaliceKiller monster))
+        {
+            onDie.Invoke();
+        }
     }
 }
