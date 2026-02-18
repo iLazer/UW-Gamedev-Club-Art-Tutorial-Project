@@ -13,10 +13,10 @@ public class MovingRock : MonoBehaviour
         
     }
 
-    // Update is called once per frame
-    void Update()
+    // FixedUpdate is called 50 times per second.
+    void FixedUpdate()
     {
-        float timeStep = speed * Time.deltaTime;
+        float timeStep = speed * Time.fixedDeltaTime;
 
         // transform.position is position, transform.rotation is rotation.
         // Go ahead and look through methods like transform.rotation.SetEulerRotation
