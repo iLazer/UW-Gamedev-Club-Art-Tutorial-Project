@@ -5,7 +5,7 @@ using UnityEngine.Events;
 public class Chalice : MonoBehaviour
 {
     [SerializeField] Transform match;
-    [SerializeField] UnityEvent onDie;
+    public UnityEvent onDie;
     public float speed = 100f;
     public float clampDistance = 0.1f;
     public static Chalice Instance { get; private set; }
