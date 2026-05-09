@@ -4,7 +4,7 @@ using UnityEngine;
 public class SpawnField : MonoBehaviour
 {
     BoxCollider2D boxCollider;
-    private void Start()
+    private void Awake()
     {
         boxCollider = GetComponent<BoxCollider2D>();
     }
